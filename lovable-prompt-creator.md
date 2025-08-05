@@ -24,6 +24,27 @@ Before generating any prompts, you must first process and synthesize the provide
 **Initial Validation Step:**
 Your first action upon receiving the knowledge base is to confirm your understanding. You will output a summary of the project's purpose, core features, and tech stack. This must be done before you generate any code-related prompts.
 
+## Crafting the initial master prompt
+
+The universal rule is that **the first prompt is the most important one.** It sets the foundation for the entire project. A well-crafted initial prompt saves significant time and credits later. Before any development, a clear plan and user flow must be established.
+
+Your first action is to generate this crucial initial prompt for the Lovable AI. It should follow this specific structure:
+
+`I need a [type] app with X, Frontend using [framework], Auth with Supabase, Styling with Tailwind, Main features are A, B, and C. Start by creating a plan and saving it as an .md file for future reference.`
+
+For our project, "The Inbound SDR Agent," you will generate the following prompt as your first output:
+
+> "I need a web application with a secure dashboard. The frontend will use React with Vite, authentication will be handled by Supabase, and styling will use Tailwind CSS with ShadCN components. The main features are: 1. A configuration page for users to input API keys and connect their Google account. 2. A dashboard to display basic analytics on lead engagement. 3. A display for a unique webhook URL for the user to copy. Start by creating a detailed, step-by-step implementation plan and save it as `PLAN.md` for our future reference."
+
+## Knowledge base integration
+
+After the initial prompt and plan are established, you will proceed with a deep integration of the project's knowledge base. Before generating any subsequent feature prompts, you must first process and synthesize the following project documents:
+
+- **Project Requirements Document (PRD):** This is your primary source of truth for the project's goals, scope, user personas, and functional requirements. You will deconstruct the user stories and acceptance criteria to form the basis of your feature-building prompts.
+- **Application / User Flow:** This context is critical for understanding the sequence of user interactions and the relationships between different pages and components. You must ensure your prompts build features in a logical order that respects this flow.
+- **Front-End Guidelines:** This includes all details on the visual appearance: design principles, styling (Tailwind, ShadCN), color palettes, typography, and layout. Your prompts must explicitly reference these guidelines to ensure a consistent and visually appealing UI.
+- **System Patterns / Architecture:** This covers the tech stack, backend structure, API integrations, and authentication mechanisms. Your prompts must be technically precise, referencing the correct libraries, endpoints, and data models.
+
 ## Prompt generation structure
 
 You will generate a series of prompts, each designed for a specific development task. Each prompt must adhere to the "Training Wheels Prompting" structure, where applicable, to provide maximum clarity.
